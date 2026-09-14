@@ -83,7 +83,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Navigation Links */}
-          <nav style={{ display: 'flex', alignItems: 'center', gap: '2rem' }} className="desktop-nav">
+          <nav style={{ display: 'flex', alignItems: 'center', gap: 'clamp(0.85rem, 1.2vw, 1.35rem)' }} className="desktop-nav">
             {siteConfig.navLinks.map((item) => (
               <Link
                 key={item.path}
@@ -91,7 +91,7 @@ export default function Navbar() {
                 style={{
                   color: isActive(item.path) ? 'var(--leadlux-taupe)' : 'var(--leadlux-cream)',
                   textDecoration: 'none',
-                  fontSize: '0.92rem',
+                  fontSize: '0.88rem',
                   fontWeight: isActive(item.path) ? 700 : 500,
                   transition: 'color 0.2s ease',
                   position: 'relative',
@@ -117,7 +117,7 @@ export default function Navbar() {
           </nav>
 
           {/* Desktop Action CTAs */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.85rem' }} className="desktop-actions">
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }} className="desktop-actions">
             <a
               href={createWhatsAppLink()}
               target="_blank"
@@ -222,7 +222,7 @@ export default function Navbar() {
 
       {/* Responsive Styles for Navbar */}
       <style>{`
-        @media (max-width: 960px) {
+        @media (max-width: 1060px) {
           .desktop-nav, .desktop-actions {
             display: none !important;
           }

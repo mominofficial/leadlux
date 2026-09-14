@@ -42,7 +42,8 @@ export const siteConfig = {
     { label: "Services", path: "/services" },
     { label: "Projects", path: "/projects" },
     { label: "About", path: "/about" },
-    { label: "Founder", path: "/owner" },
+    { label: "Team", path: "/team" },
+    { label: "Careers", path: "/careers" },
     { label: "Contact", path: "/contact" }
   ],
 
