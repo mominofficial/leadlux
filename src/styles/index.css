@@ -411,3 +411,58 @@ p {
     scroll-behavior: auto !important;
   }
 }
+
+/* Key Points & Trust Strip Styling */
+.keypoint-pill:hover {
+  border-color: var(--leadlux-taupe) !important;
+  background-color: rgba(200, 157, 92, 0.12) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(200, 157, 92, 0.18);
+}
+
+.keypoints-desktop {
+  display: block;
+}
+
+.keypoints-mobile {
+  display: none;
+  overflow: hidden;
+  width: 100%;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marqueeScroll 22s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marqueeScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@media (max-width: 1023px) {
+  .keypoints-desktop {
+    display: none !important;
+  }
+  .keypoints-mobile {
+    display: flex !important;
+  }
+}
+
+@media (max-width: 580px) {
+  .hero-left-overlay {
+    max-width: 50% !important;
+  }
+  .hero-left-overlay > div:first-child {
+    padding: 0.5rem 0.75rem !important;
+  }
+  .hero-left-overlay > div:first-child > div:last-child {
+    font-size: 0.78rem !important;
+  }
+}
+

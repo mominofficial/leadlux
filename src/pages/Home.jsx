@@ -70,67 +70,103 @@ export default function Home() {
                   }}
                 />
 
-                {/* Subtle Framed Tag Accents */}
+                {/* Subtle Framed Tag Accents - Positioned strictly inside the empty left half of the visual */}
                 <div
+                  className="hero-left-overlay"
                   style={{
                     position: 'absolute',
-                    bottom: '1rem',
-                    left: '1rem',
-                    right: '1rem',
+                    top: '50%',
+                    left: '5%',
+                    transform: 'translateY(-50%)',
+                    maxWidth: '42%',
                     display: 'flex',
-                    flexWrap: 'wrap',
-                    gap: '0.5rem',
-                    pointerEvents: 'none'
+                    flexDirection: 'column',
+                    gap: '0.65rem',
+                    pointerEvents: 'none',
+                    zIndex: 3
                   }}
                 >
-                  <span
+                  <div
                     style={{
-                      backgroundColor: 'rgba(10, 38, 37, 0.85)',
-                      backdropFilter: 'blur(8px)',
+                      backgroundColor: 'rgba(10, 38, 37, 0.88)',
+                      backdropFilter: 'blur(12px)',
                       color: 'var(--leadlux-cream)',
-                      fontSize: '0.75rem',
-                      fontWeight: 700,
-                      letterSpacing: '0.08em',
-                      textTransform: 'uppercase',
-                      padding: '0.35rem 0.75rem',
-                      borderRadius: '4px',
-                      border: '1px solid rgba(247, 244, 236, 0.2)'
+                      padding: '0.85rem 1rem',
+                      borderRadius: '8px',
+                      border: '1px solid rgba(200, 157, 92, 0.4)',
+                      boxShadow: '0 12px 28px rgba(5, 22, 21, 0.5)'
                     }}
                   >
-                    Digital Growth
-                  </span>
-                  <span
-                    style={{
-                      backgroundColor: 'rgba(10, 38, 37, 0.85)',
-                      backdropFilter: 'blur(8px)',
-                      color: 'var(--leadlux-taupe)',
-                      fontSize: '0.75rem',
-                      fontWeight: 700,
-                      letterSpacing: '0.08em',
-                      textTransform: 'uppercase',
-                      padding: '0.35rem 0.75rem',
-                      borderRadius: '4px',
-                      border: '1px solid rgba(200, 157, 92, 0.3)'
-                    }}
-                  >
-                    Creative & Video
-                  </span>
-                  <span
-                    style={{
-                      backgroundColor: 'rgba(10, 38, 37, 0.85)',
-                      backdropFilter: 'blur(8px)',
-                      color: 'var(--leadlux-cream)',
-                      fontSize: '0.75rem',
-                      fontWeight: 700,
-                      letterSpacing: '0.08em',
-                      textTransform: 'uppercase',
-                      padding: '0.35rem 0.75rem',
-                      borderRadius: '4px',
-                      border: '1px solid rgba(247, 244, 236, 0.2)'
-                    }}
-                  >
-                    Performance & Code
-                  </span>
+                    <div style={{ fontSize: '0.68rem', fontWeight: 800, color: 'var(--leadlux-taupe)', letterSpacing: '0.12em', textTransform: 'uppercase', marginBottom: '0.2rem' }}>
+                      Remote Growth Partners
+                    </div>
+                    <div style={{ fontSize: '0.92rem', fontWeight: 700, color: 'var(--leadlux-cream)', lineHeight: 1.3 }}>
+                      Scale Your Brand Worldwide
+                    </div>
+                  </div>
+
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '0.35rem' }}>
+                    <span
+                      style={{
+                        backgroundColor: 'rgba(10, 38, 37, 0.82)',
+                        backdropFilter: 'blur(10px)',
+                        color: 'var(--leadlux-taupe)',
+                        fontSize: '0.72rem',
+                        fontWeight: 700,
+                        letterSpacing: '0.08em',
+                        textTransform: 'uppercase',
+                        padding: '0.35rem 0.65rem',
+                        borderRadius: '4px',
+                        border: '1px solid rgba(200, 157, 92, 0.25)',
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: '0.35rem',
+                        width: 'fit-content'
+                      }}
+                    >
+                      ✦ Digital Growth
+                    </span>
+                    <span
+                      style={{
+                        backgroundColor: 'rgba(10, 38, 37, 0.82)',
+                        backdropFilter: 'blur(10px)',
+                        color: 'var(--leadlux-cream)',
+                        fontSize: '0.72rem',
+                        fontWeight: 700,
+                        letterSpacing: '0.08em',
+                        textTransform: 'uppercase',
+                        padding: '0.35rem 0.65rem',
+                        borderRadius: '4px',
+                        border: '1px solid rgba(247, 244, 236, 0.15)',
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: '0.35rem',
+                        width: 'fit-content'
+                      }}
+                    >
+                      ✦ Creative & Video
+                    </span>
+                    <span
+                      style={{
+                        backgroundColor: 'rgba(10, 38, 37, 0.82)',
+                        backdropFilter: 'blur(10px)',
+                        color: 'var(--leadlux-cream)',
+                        fontSize: '0.72rem',
+                        fontWeight: 700,
+                        letterSpacing: '0.08em',
+                        textTransform: 'uppercase',
+                        padding: '0.35rem 0.65rem',
+                        borderRadius: '4px',
+                        border: '1px solid rgba(247, 244, 236, 0.15)',
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: '0.35rem',
+                        width: 'fit-content'
+                      }}
+                    >
+                      ✦ Performance & Code
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -216,35 +252,91 @@ export default function Home() {
       </section>
 
       {/* ========================================================================= */}
-      {/* 2. TRUST / POSITIONING STRIP */}
+      {/* 2. ATTRACTIVE KEY POINTS / TRUST STRIP (One Line in PC & Mobile Responsive) */}
       {/* ========================================================================= */}
       <div 
+        className="keypoints-wrapper"
         style={{ 
           backgroundColor: 'var(--leadlux-teal-deep)', 
-          borderBottom: '1px solid rgba(247, 244, 236, 0.08)',
-          padding: '1.25rem 0'
+          borderTop: '1px solid rgba(200, 157, 92, 0.25)',
+          borderBottom: '1px solid rgba(200, 157, 92, 0.25)',
+          padding: '1.1rem 0',
+          position: 'relative',
+          overflow: 'hidden'
         }}
       >
-        <div className="container">
+        {/* Desktop View: Guaranteed ONE LINE across entire container */}
+        <div className="keypoints-desktop container">
           <div 
             style={{ 
               display: 'flex', 
-              flexWrap: 'wrap', 
               alignItems: 'center', 
-              justifyContent: 'space-between', 
-              gap: '1.25rem',
-              fontSize: '0.88rem',
-              fontWeight: 700,
-              textTransform: 'uppercase',
-              letterSpacing: '0.12em',
-              color: 'var(--leadlux-text-light-muted)'
+              justifyContent: 'space-between',
+              gap: '1rem',
+              whiteSpace: 'nowrap',
+              width: '100%'
             }}
           >
             {siteConfig.positioningPillars.map((pillar, idx) => (
-              <span key={idx} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                <span style={{ color: 'var(--leadlux-taupe)' }}>•</span>
-                <span>{pillar}</span>
-              </span>
+              <div
+                key={idx}
+                className="keypoint-pill"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '0.6rem',
+                  padding: '0.45rem 0.95rem',
+                  borderRadius: '24px',
+                  backgroundColor: 'rgba(247, 244, 236, 0.04)',
+                  border: '1px solid rgba(200, 157, 92, 0.2)',
+                  transition: 'all 0.3s ease'
+                }}
+              >
+                <span style={{ color: 'var(--leadlux-taupe)', fontSize: '0.8rem', lineHeight: 1 }}>✦</span>
+                <span style={{ 
+                  color: 'var(--leadlux-cream)', 
+                  fontSize: 'clamp(0.74rem, 0.85vw, 0.88rem)',
+                  fontWeight: 700, 
+                  letterSpacing: '0.08em', 
+                  textTransform: 'uppercase' 
+                }}>
+                  {pillar}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Mobile & Tablet View: Continuous Infinite Marquee so it never wraps into multiple lines */}
+        <div className="keypoints-mobile">
+          <div className="marquee-track">
+            {[...siteConfig.positioningPillars, ...siteConfig.positioningPillars].map((pillar, idx) => (
+              <div
+                key={idx}
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '0.5rem',
+                  padding: '0.4rem 0.85rem',
+                  borderRadius: '20px',
+                  backgroundColor: 'rgba(247, 244, 236, 0.05)',
+                  border: '1px solid rgba(200, 157, 92, 0.2)',
+                  marginRight: '1rem',
+                  whiteSpace: 'nowrap',
+                  flexShrink: 0
+                }}
+              >
+                <span style={{ color: 'var(--leadlux-taupe)', fontSize: '0.75rem' }}>✦</span>
+                <span style={{ 
+                  color: 'var(--leadlux-cream)', 
+                  fontSize: '0.78rem',
+                  fontWeight: 700, 
+                  letterSpacing: '0.08em', 
+                  textTransform: 'uppercase' 
+                }}>
+                  {pillar}
+                </span>
+              </div>
             ))}
           </div>
         </div>
